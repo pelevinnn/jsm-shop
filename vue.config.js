@@ -4,5 +4,6 @@ module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === 'production'
       ? '/jsm-shop/'
-      : '/'
+      : '/',
+  productionSourceMap: false
 })
