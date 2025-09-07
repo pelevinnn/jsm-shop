@@ -91,4 +91,16 @@
     background-color: white;
     color: hsl(14, 86%, 42%);
   }
+  @media(max-width: 992px){
+    .cart-wrapper h2{
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .cart-price > div{
+      font-size: 24px;
+    }
+    .cart-delivery{
+      font-size: 12px;
+    }
+  }
 </style>

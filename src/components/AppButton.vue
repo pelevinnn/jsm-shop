@@ -102,4 +102,20 @@ import {defineProps, defineEmits, inject, computed} from "vue"
   display: flex;
   justify-content: end;
 }
+@media(max-width: 992px){
+  .button-wrap{
+    width: 100%;
+  }
+  .button-wrap button{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .button-quantity{
+    width: 165px;
+  }
+  .button-quantity > button{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 </style>

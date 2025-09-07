@@ -61,4 +61,13 @@ import {defineProps, defineEmits} from "vue"
     margin-top: 30px;
     font-size: 16px;
   }
+  @media(max-width: 992px){
+    .item{
+      width: 48%;
+    }
+    .item-button{
+      width: auto;
+      left: 35px;
+    }
+  }
 </style>

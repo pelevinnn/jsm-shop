@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-8">
       <h1 class="dark-color">Desserts</h1>
       <div class="items">
         <app-item
@@ -12,7 +12,7 @@
         ></app-item>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-4">
       <the-cart
         :cart-items="cartItems"
         :total-price="totalPrice"
@@ -183,9 +183,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  .row{
-    margin-top: 50px;
   }
   h1{
     font-weight: bold;
