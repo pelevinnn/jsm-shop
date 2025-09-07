@@ -30,7 +30,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 50px 0;
 }
 .red-text{
     color: hsl(14, 86%, 42%)
@@ -63,4 +63,8 @@ body {
 }
 .darkgrey-color{
     color: #3a3838;
+}
+#app{
+    background-color: hsl(13, 31%, 94%);
+    padding: 50px;
 }
