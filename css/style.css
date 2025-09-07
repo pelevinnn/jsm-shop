@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/static/RedHatText-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/static/RedHatText-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/static/RedHatText-SemiBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'RedHatText', sans-serif;
+    font-weight: 500;
+    background-color: #e5e5e5;
+    font-size: 18px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.red-text{
+    color: hsl(14, 86%, 42%)
+}
+.bold-text{
+    font-weight: bold;
+}
+.active-border{
+    border: 3px solid hsl(14, 86%, 42%);
+}
+.item-button button{
+    width: 100%;
+    border: none;
+}
+.button{
+    line-height: 2.5;
+}
+.button-wrap{
+    border-radius: 30px;
+    border: 2px solid hsl(14, 86%, 42%);
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+}
+.dark-color{
+    color: hsl(14, 65%, 9%)
+}
+.grey-color{
+    color: grey;
+}
+.darkgrey-color{
+    color: #3a3838;
+}
