@@ -67,4 +67,10 @@ body {
 #app{
     background-color: hsl(13, 31%, 94%);
     padding: 50px;
+    border-radius: 20px;
+}
+@media(max-width: 992px){
+    #app{
+        padding: 15px;
+    }
 }
