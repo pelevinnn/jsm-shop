@@ -64,10 +64,15 @@ import {defineProps, defineEmits} from "vue"
   @media(max-width: 992px){
     .item{
       width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .item-button{
-      width: auto;
-      left: 35px;
+      width: 165px;
+      left: 50%;
+      transform: translate(-50%, 0px);
     }
   }
 </style>

@@ -117,5 +117,8 @@ import {defineProps, defineEmits, inject, computed} from "vue"
     padding-left: 0px;
     padding-right: 0px;
   }
+  .button{
+    font-size: 16px;
+  }
 }
 </style>

@@ -5,5 +5,6 @@ module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
       ? '/jsm-shop/'
       : '/',
-  productionSourceMap: false
 })
+
+

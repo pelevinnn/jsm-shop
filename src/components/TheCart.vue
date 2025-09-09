@@ -1,6 +1,6 @@
 <template>
   <div class="cart-wrapper" v-if="cartItems.length > 0">
-    <h2 class="red-text bold-text">Your Cart({{cartItems.length}})</h2>
+    <h2 class="red-text bold-text">Your Cart({{totalQuantity}})</h2>
     <app-cart-item
       v-for="(item, index) in props.cartItems"
       :key="index"
@@ -15,17 +15,19 @@
       This is a&nbsp;<b>carbon-neutral</b>&nbsp;delivery
     </div>
     <div class="cart-button">
-      <button class="">Confirm Order</button>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirm Order</button>
     </div>
   </div>
-  <div class="cart-wrapper" v-else>
-    <h2 class="red-text bold-text">Your Cart Empty</h2>
+  <div class="cart-wrapper cart-wrapper__mobile" v-else>
+    <h2 class="red-text bold-text" style="text-align: center">Your Cart Empty</h2>
   </div>
+  <app-modal></app-modal>
 </template>
 
 <script setup>
   import AppCartItem from "@/components/AppCartItem.vue"
-  import {defineProps} from "vue"
+  import AppModal from "@/components/AppModal.vue";
+  import {defineProps, computed} from "vue"
 
   const props = defineProps({
     cartItems:{
@@ -36,8 +38,14 @@
     }
   })
 
-  // watch( props.totalPrice, () => {
-  //   console.log(props.totalPrice)
+  const totalQuantity = computed(() => {
+    return props.cartItems.reduce((total, item) => total + item.quantity, 0)
+  })
+
+  // watch( props.totalQuantity, () => {
+  //   if(props.totalQuantity.length > 0){
+  //     console.log(props.totalQuantity)
+  //   }
   // } )
 </script>
 
@@ -52,6 +60,7 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    margin-left: 30px;
   }
   h2{
     margin-bottom: 20px;
@@ -91,16 +100,28 @@
     background-color: white;
     color: hsl(14, 86%, 42%);
   }
+  .cart-wrapper h2{
+    margin-bottom: 0;
+  }
   @media(max-width: 992px){
     .cart-wrapper h2{
       font-size: 24px;
       margin-bottom: 0;
+    }
+    .cart-wrapper {
+      margin-left: 0px;
     }
     .cart-price > div{
       font-size: 24px;
     }
     .cart-delivery{
       font-size: 12px;
+    }
+    .cart-wrapper__mobile{
+      display: none;
+    }
+    .cart-button > button{
+      max-width: 300px;
     }
   }
 </style>
